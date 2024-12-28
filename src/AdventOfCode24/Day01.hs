@@ -12,5 +12,3 @@ part2 ids =
 occurrences = map (\g -> (head g, length g)) . group . sort
 
 day01 = Day (part1 . readGrid, part2 . readGrid)
-
-readGrid = map (map read . words) . lines

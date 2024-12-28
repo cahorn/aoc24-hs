@@ -28,6 +28,7 @@ library
       AdventOfCode24
       AdventOfCode24.Common
       AdventOfCode24.Day01
+      AdventOfCode24.Day02
   other-modules:
       Paths_aoc24
   autogen-modules:
