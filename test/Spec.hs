@@ -4,7 +4,7 @@ import Test.Tasty
 import Test.Tasty.HUnit
 import Text.Printf
 
-answers = [(11, 31), (2, 4)]
+answers = [(11, 31), (2, 4), (161, 48)]
 
 main = do
   inputs <- mapM (readFile . printf "test/day%02d.txt") [1 .. length answers]

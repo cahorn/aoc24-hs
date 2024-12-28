@@ -3,7 +3,7 @@ module AdventOfCode24.Day01 (day01) where
 import AdventOfCode24.Common
 import Data.List
 
-part1 = sum . map (abs . foldl1 (-)) . transpose . map sort . transpose
+part1 = sum . map (abs . listUncurry (-)) . transpose . map sort . transpose
 
 part2 ids =
   let [left, right] = transpose ids
