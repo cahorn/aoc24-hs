@@ -27,9 +27,14 @@ ghc-options:
 - -Wcompat
 - -Widentities
 - -Wincomplete-record-updates
-- -Wincomplete-uni-patterns
+#- -Wincomplete-uni-patterns
 - -Wmissing-export-lists
 - -Wmissing-home-modules
+- -Wno-compat-unqualified-imports
+- -Wno-incomplete-patterns
+- -Wno-incomplete-uni-patterns
+- -Wno-missing-signatures
+- -Wno-x-partial
 - -Wpartial-fields
 - -Wredundant-constraints
 
@@ -57,3 +62,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - aoc24
+    - tasty
+    - tasty-hunit
