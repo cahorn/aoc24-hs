@@ -1,0 +1,9 @@
+#!/bin/sh
+
+ORMOLU_FLAGS="--mode inplace"
+
+if [ $# -gt 0 ]; then
+    ormolu $ORMOLU_FLAGS $@
+else
+    ormolu $ORMOLU_FLAGS $(find . -not -path '*/.*' -name '*.hs')
+fi

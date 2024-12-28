@@ -1,0 +1,11 @@
+#!/bin/sh
+
+ORMOLU_FLAGS="--mode check"
+
+if [ $# -gt 0 ]; then
+    ormolu $ORMOLU_FLAGS $@
+    hlint $@
+else
+    ormolu $ORMOLU_FLAGS $(find . -not -path '*/.*' -name '*.hs')
+    hlint .
+fi
